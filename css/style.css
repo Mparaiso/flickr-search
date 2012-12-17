@@ -1,0 +1,23 @@
+  body{
+    font-family: Helvetica,Tahoma,Verdana,sans-serif,sans;
+    font-size:100%;
+  }
+  body.dark{
+    color:#F9F9F9;
+    background:#222;
+  }
+  .thumbnail img{
+    background:#222;
+    width:150px;
+    height:150px;
+  }
+  #modal, .modal-footer{
+    background: #111 !important;
+  }
+  .modal-body{
+    overflow: hidden;
+    text-align: center;
+  }
+  .modal-body img{
+    margin: auto;
+  }
