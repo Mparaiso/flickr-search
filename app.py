@@ -1,7 +1,10 @@
 import SimpleHTTPServer
 import SocketServer
+import os
 
-PORT = 3000
+_port = os.environ.get("PORT")
+
+PORT = _port if _port else 5000
 
 Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
 
