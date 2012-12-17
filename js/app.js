@@ -1,3 +1,7 @@
+// Delegate .transition() calls to .animate()
+// if the browser can't do CSS transitions.
+if (!$.support.transition)
+    $.fn.transition = $.fn.animate;
 // APPLICATION
 var app = angular.module("application",[]);
 // IMAGE LOADER DIRECTIVE
