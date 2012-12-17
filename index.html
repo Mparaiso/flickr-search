@@ -59,15 +59,18 @@
                 <i ng-click='keyword=null' ng-show='keyword' class='icon-remove'></i>
                 <!--<br/><strong>{{keyword}}</strong>-->
             </td>
-            </tr><tr>
+            </tr>
+            <!--
+            <tr>
             <td><label for='api-key'>
               Flickr API key : </label></td>
               <td>
                 <input ng-change='search(keyword)'  required='true' ng-change="setToLocalStorage('apikey',apiKey)" 
                 placeholder='Enter your API-key' type='text' name='api-key' ng-model='apiKey'/>
-                <!--<br/><strong>{{apiKey}}</strong>-->
+
               </td>
-            </tr>
+            </tr> 
+            -->
             <tr>
             <td><label for='max-results-per-page'>
               Max results per page : </label></td>
@@ -136,7 +139,8 @@
     }
     $scope.bodyClass = "light";
     $http({cache:true});
-    $scope.apiKey = window.localStorage.getItem("apiKey") || null;
+    // $scope.apiKey = window.localStorage.getItem("apiKey") || null;
+    $scope.apiKey = window.localStorage.getItem("apiKey") || "a47e50dcce48c46c58f9b8c622c42a18";
     $scope.keyword= null;
     $scope.setToLocalStorage = function(key,value){
         // set apikey to localstorage doesnt seem to work though
